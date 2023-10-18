@@ -1,5 +1,5 @@
 # cwc  by Python Library
-[![Upload pypi.org](https://github.com/kirin123kirin/cwc/actions/workflows/pypi.yml/badge.svg?branch=v0.1.0)](https://github.com/kirin123kirin/cwc/actions/workflows/pypi.yml)
+[![Upload pypi.org](https://github.com/kirin123kirin/cwc/actions/workflows/pypi.yml/badge.svg?branch=v0.1.1)](https://github.com/kirin123kirin/cwc/actions/workflows/pypi.yml)
 
 # Overview
 TODO
