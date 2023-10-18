@@ -135,8 +135,12 @@ def main():
     if args.filename:
         text = ""
         for f in args.filename:
-            with codecs.open(os.path.normpath(f), encoding=args.encoding) as fp:
-                text += fp.read()
+            try:
+                with codecs.open(os.path.normpath(f), encoding=args.encoding) as fp:
+                    text += fp.read()
+            except UnicodeEncodeError:
+                with codecs.open(os.path.normpath(f), encoding="utf-8") as fp:
+                    text += fp.read()
     else:
         text = re.sub("\s", "", pyperclip.paste())
 
@@ -148,7 +152,7 @@ def main():
             os.startfile(args.outfile)
 
     else:
-        cerr("ワードクラウド化したい文章をコピーして再度実行してください。\n空白や改行のみ場合は")
+        cerr("クリップボードが空っぽまたは、空白、タブ、改行のみで文章がないため処理を中止しました。\nワードクラウド化したい文章をコピーして再度実行してください。")
 
 
 def test():
