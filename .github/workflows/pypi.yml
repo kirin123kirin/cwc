@@ -50,6 +50,7 @@ jobs:
             run:   |
                    python -m pip install -U pip
                    pip install setuptools wheel pytest flake8 twine psutil
+                   pip install mecab-python3 janome wordcloud pyperclip
          -
             name:  Test and Build for 2.7
             shell: bash
